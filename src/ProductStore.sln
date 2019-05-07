@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductStore.Domain.Reposit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductStore.Domain.Models", "ProductStore.Domain.Models\ProductStore.Domain.Models.csproj", "{CB01DC60-5CAF-4125-B980-110800AC1502}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{5ABB821F-75FE-4BCC-BD99-FF53F18BF245}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{5CEA7C57-890E-40AC-A48A-83233C86C567}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +54,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E2595D78-67C8-454D-8DF7-AF6FD37317A6} = {5CEA7C57-890E-40AC-A48A-83233C86C567}
+		{95AF76B3-9D9B-4E27-A2F4-C720D21BDF56} = {5CEA7C57-890E-40AC-A48A-83233C86C567}
+		{C5226A70-E307-41A4-8CC9-CBB871FBB8C2} = {5CEA7C57-890E-40AC-A48A-83233C86C567}
+		{8F703C34-D06F-4AB0-A09F-51DDB99D9933} = {5ABB821F-75FE-4BCC-BD99-FF53F18BF245}
+		{E5459B5D-1824-42EE-9C89-1B210B5304F5} = {5ABB821F-75FE-4BCC-BD99-FF53F18BF245}
+		{CB01DC60-5CAF-4125-B980-110800AC1502} = {5ABB821F-75FE-4BCC-BD99-FF53F18BF245}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19052788-6C6E-4107-AFC7-21391954F24B}

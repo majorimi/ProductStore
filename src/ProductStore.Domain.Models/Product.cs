@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProductStore.Domain.Models
 {
@@ -12,8 +9,22 @@ namespace ProductStore.Domain.Models
 
 		public string Name { get; set; }
 
-		public string Desctiption { get; set; }
-		
-		public byte[] Image { get; set; }
+		public string Description { get; set; }
+
+		public decimal Price { get; set; }
+
+		public bool Deleted { get; set; }
+
+		public DateTime CreatedAtUtc { get; set; }
+
+		public ProductCategory ProductCategory { get; set; }
+		public ICollection<ProductRating> ProductRatings { get; set; }
+		public ICollection<ProductImage> ProductImages { get; set; }
+
+		public Product()
+		{
+			ProductRatings = new List<ProductRating>();
+			ProductImages = new List<ProductImage>();
+		}
 	}
 }

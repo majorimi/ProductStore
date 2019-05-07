@@ -258,7 +258,7 @@ namespace ProductStore.Web.Api
 						//
 						//c.EnableApiKeySupport("apiKey", "header");
 
-						c.InjectJavaScript(thisAssembly, "ProductStore.Web.Api.apiKeyAuth.js"); //ApiKey
+						c.InjectJavaScript(thisAssembly, "ProductStore.Web.Api.Swagger.apiKeyAuth.js"); //Bearer
 					});
         }
     }

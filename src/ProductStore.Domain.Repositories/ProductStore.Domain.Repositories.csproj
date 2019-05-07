@@ -53,6 +53,10 @@
     <Compile Include="Implementations\EfProductRatingRepository.cs" />
     <Compile Include="Implementations\EfProductRepository.cs" />
     <Compile Include="Interfaces\IProductCategoryRepository.cs" />
+    <Compile Include="Interfaces\IProductImageRepository.cs" />
+    <Compile Include="Interfaces\IProductRatingRepository.cs" />
+    <Compile Include="Interfaces\IProductRepository.cs" />
+    <Compile Include="Interfaces\ISaveRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Implementations\RepositoryBase.cs" />
   </ItemGroup>

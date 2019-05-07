@@ -1,9 +1,8 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using ProductStore.Domain.Data;
 using ProductStore.Domain.Data.Context;
 
-namespace ProductStore.Domain.Repositories
+namespace ProductStore.Domain.Repositories.Implementations
 {
 	public abstract class RepositoryBase
 	{

@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductStore.Unity", "Produ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductStore.Web.Shared", "ProductStore.Web.Shared\ProductStore.Web.Shared.csproj", "{3F0125D4-1CA3-4BB6-B845-0987C824095D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaStore.Idp", "MegaStore.Idp\MegaStore.Idp.csproj", "{659CB006-1DB5-4069-B44A-B62EF158A247}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{3F0125D4-1CA3-4BB6-B845-0987C824095D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F0125D4-1CA3-4BB6-B845-0987C824095D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F0125D4-1CA3-4BB6-B845-0987C824095D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{659CB006-1DB5-4069-B44A-B62EF158A247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{659CB006-1DB5-4069-B44A-B62EF158A247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{659CB006-1DB5-4069-B44A-B62EF158A247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{659CB006-1DB5-4069-B44A-B62EF158A247}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

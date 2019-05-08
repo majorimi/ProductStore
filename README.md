@@ -53,9 +53,18 @@ In order to run the project you have to set up multiple start up.
 Swagger is an Open sourced API "self" documentation project https://swagger.io/. Also it can be used for testing the API. 
 To try it run the API project and type in "/swagger/ui/index" after the port number.
 
-## Project status, future improvements
+## Project status
+
+- IDP: Identity server installed, UI not added not configured
+- MVC project: UI not ready, does not authenticate with IDP, able to call the API and receive data
+- API project: mostly done some endpoint is missing, API security is added but in most cases turned off
+
+## Future improvements
 
 - Write unit tests
+- Performance improvements e.g. store "snapshot" of rating values
 - Use caching on API side
+- Store images in SQL Filestream or Azure Blob storage, etc...
+- Add more logging and analitics
 - Implement frontend with SPA framework
 - IDP should use DB and other 3rd party providers (Google, Facebook)

@@ -11,7 +11,11 @@ namespace ProductStore.Web.Api
 			Mapper.Initialize((config) =>
 			{
 				config.CreateMap<ProductCategory, ProductCategoryModel>();
-					//.ForMember(m => m., opt => opt.Ignore());
+
+				config.CreateMap<Product, ProductModel>()
+					.ForMember(m => m.CategoryId, opt => opt.MapFrom(s => s.ProductCategory.Id))
+					.ForMember(m => m.Rating, opt => opt.MapFrom(s => s.GetRating()));
+
 			});
 
 			Mapper.AssertConfigurationIsValid();

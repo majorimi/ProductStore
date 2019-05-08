@@ -20,6 +20,8 @@ namespace ProductStore.Domain.Repositories.Implementations
 		public async Task<IEnumerable<Product>> GetAllAsync(int pageSize, int page, CancellationToken cancellationToken)
 		{
 			return await _dbContext.Products
+				.Include(i => i.ProductCategory)
+				.Include(i => i.ProductRatings)
 				.OrderBy(t => t.Id)
 				.Where(x => !x.Deleted)
 				.Skip((page - 1) * pageSize)
@@ -30,6 +32,8 @@ namespace ProductStore.Domain.Repositories.Implementations
 		public async Task<Product> GetByIdAsync(int id, CancellationToken cancellationToken)
 		{
 			return await _dbContext.Products
+				.Include(i => i.ProductCategory)
+				.Include(i => i.ProductRatings)
 				.SingleOrDefaultAsync(s => s.Id == id, cancellationToken);
 		}
 
@@ -37,6 +41,7 @@ namespace ProductStore.Domain.Repositories.Implementations
 		{
 			return await _dbContext.Products
 				.Include(i => i.ProductCategory)
+				.Include(i => i.ProductRatings)
 				.Where(x => !x.Deleted)
 				.SingleOrDefaultAsync(s => s.ProductCategory.Id == categoryId, cancellationToken);
 		}
@@ -67,6 +72,39 @@ namespace ProductStore.Domain.Repositories.Implementations
 			_dbContext.Products.Add(product);
 
 			return product;
+		}
+
+		public async Task<bool> DeleteAsync(int id, CancellationToken cancellationToken)
+		{
+			var product = await _dbContext.Products.SingleOrDefaultAsync(x => x.Id == id);
+			if (product == null)
+			{
+				return false;
+			}
+
+			product.Deleted = true;
+			return true;
+		}
+
+		public async Task<bool> UpdateAsync(int id, string name, string description, decimal price, int categoryId, CancellationToken cancellationToken)
+		{
+			var product = await _dbContext.Products.SingleOrDefaultAsync(x => x.Id == id);
+			if (product == null)
+			{
+				return false;
+			}
+			var category = await _dbContext.ProductCategories.SingleOrDefaultAsync(x => x.Id == categoryId);
+			if (category == null)
+			{
+				return false;
+			}
+
+			product.Name = name;
+			product.Description = description;
+			product.Price = price;
+			product.ProductCategory = category;
+
+			return true;
 		}
 	}
 }

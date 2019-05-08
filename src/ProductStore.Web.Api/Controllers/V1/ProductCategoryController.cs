@@ -75,6 +75,7 @@ namespace ProductStore.Web.Api.Controllers.V1
 		[ApiModelValidate]
 		[SwaggerResponse(HttpStatusCode.Created, "Returns with the newly created object Id", typeof(int))]
 		[SwaggerResponse(HttpStatusCode.BadRequest, "Bad request, missing or incorrect input", typeof(string))]
+		[SwaggerResponse(HttpStatusCode.Forbidden, "Access denied, request is not authorized")]
 		[HttpPost]
 		public async Task<IHttpActionResult> Post(CreateProductCategoryModel model, CancellationToken cancellationToken)
 		{

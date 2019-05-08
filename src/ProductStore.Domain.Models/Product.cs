@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ProductStore.Domain.Models
 {
@@ -25,6 +26,13 @@ namespace ProductStore.Domain.Models
 		{
 			ProductRatings = new List<ProductRating>();
 			ProductImages = new List<ProductImage>();
+		}
+
+		public double GetRating()
+		{
+			return ProductRatings?.Any() ?? false
+				? ProductRatings.Average(r => r.Rating)
+				: 0;
 		}
 	}
 }

@@ -15,6 +15,10 @@ namespace ProductStore.Domain.Repositories.Interfaces
 
 		Task<IEnumerable<Product>> GetByNameAsync(string name, CancellationToken cancellationToken);
 
+		Task<bool> UpdateAsync(int id, string name, string description, decimal price, int categoryId, CancellationToken cancellationToken);
+
 		Task<Product> CreateAsync(string name, string description, decimal price, int categoryId, CancellationToken cancellationToken);
+
+		Task<bool> DeleteAsync(int id, CancellationToken cancellationToken);
 	}
 }

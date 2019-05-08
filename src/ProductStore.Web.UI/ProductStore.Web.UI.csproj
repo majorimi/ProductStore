@@ -149,6 +149,9 @@
     </Compile>
     <Compile Include="Infrastructure\ApiClient\SimpleHttpClientProvider.cs" />
     <Compile Include="Infrastructure\ApiClient\IHttpClientProvider.cs" />
+    <Compile Include="Infrastructure\ApiResult.cs" />
+    <Compile Include="Infrastructure\IStoreApiService.cs" />
+    <Compile Include="Infrastructure\StoreApiService.cs" />
     <Compile Include="Models\Home\HomeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
